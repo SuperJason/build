@@ -134,7 +134,7 @@ $ sudo apt-get install android-tools-adb android-tools-fastboot autoconf \
 Note that here you don't install a huge SDK, it's simply a Python script that
 you download and put in your `$PATH`, that's it. Exactly how to "install" repo,
 could be found in the Google [repo] pages, so follow those instructions before
-continuing.
+continuing. There is also an [alternative repo] for Chinese Mainland user.
 
 ## 7.3 Get the source code
 Choose the manifest corresponding to the platform you intend to use. For
@@ -145,7 +145,7 @@ an existing tree (see Tips and Tricks below).
 ```bash
 $ mkdir -p $HOME/devel/optee
 $ cd $HOME/devel/optee
-$ repo init -u https://github.com/OP-TEE/manifest.git -m ${TARGET}.xml [-b ${BRANCH}]
+$ repo init -u https://github.com/SuperJason/manifest.git -m ${TARGET}.xml [-b ${BRANCH}]
 $ repo sync
 ```
 ## 7.4 Get the toolchains
@@ -226,7 +226,7 @@ instead of an hour. The way to do this are as follows.
    instructions above, the only difference is that you reference the other local
    forest when running `repo init`, like this
    ```
-   repo init -u https://github.com/OP-TEE/manifest.git --reference /home/jbech/devel/optee-ref
+   repo init -u https://github.com/SuperJason/manifest.git --reference /home/jbech/devel/optee-ref
    ```
 4. The rest is the same above, but now it will only take a couple of seconds to
    clone a forest.
@@ -263,5 +263,6 @@ Please have a look at out [FAQ] file for a list of questions commonly asked.
 [OP-TEE/README.md]: https://github.com/OP-TEE/optee_os/blob/master/README.md
 [qemu.md]: ./docs/qemu.md
 [repo]: https://source.android.com/source/downloading.html
+[alternative repo]: https://mirrors.tuna.tsinghua.edu.cn/help/AOSP
 [rpi3.md]: ./docs/rpi3.md
 [ti.md]: ./docs/ti.md
